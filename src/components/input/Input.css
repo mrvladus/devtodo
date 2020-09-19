@@ -1,0 +1,34 @@
+.input-form {
+  display: flex;
+}
+.input-field {
+  background: var(--light);
+  color: var(--dark);
+  border: solid 1px var(--primary);
+  outline: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 300px;
+  font-size: 20px;
+  transition: 0.5s ease;
+}
+.input-field:focus {
+  transform: translateY(-5px);
+}
+.input-btn {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 70px;
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  box-shadow: var(--shadow);
+}
+.input-btn:hover {
+  transform: translateY(-5px);
+}
