@@ -6,10 +6,11 @@ const Input = ({ todos, setTodos }) => {
   // On submit action
   const submitHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { id: Date.now(), text, inProgress: false, completed: false },
-    ]);
+    if (text)
+      setTodos([
+        { id: Date.now(), text, inProgress: false, completed: false },
+        ...todos,
+      ]);
     setText("");
   };
   return (
@@ -20,12 +21,14 @@ const Input = ({ todos, setTodos }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <input
+      <button
         type="submit"
         value="Add"
         onClick={(e) => submitHandler(e)}
         className="input-btn"
-      />
+      >
+        <i className="fas fa-plus-square fa-lg"></i>
+      </button>
     </form>
   );
 };

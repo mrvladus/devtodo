@@ -1,30 +1,34 @@
 .input-form {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 .input-field {
-  background: var(--light);
-  color: var(--dark);
-  border: solid 1px var(--primary);
+  background: var(--card-bg);
+  color: var(--text);
+  border: none;
   outline: none;
   border-radius: 3px;
+  width: 350px;
   padding: 10px;
-  width: 300px;
   font-size: 20px;
+  border: solid 1px var(--card-bg);
   transition: 0.5s ease;
 }
 .input-field:focus {
+  border: solid 1px var(--border);
   transform: translateY(-5px);
 }
 .input-btn {
-  background: var(--primary);
-  color: var(--light);
+  background: var(--btn-p);
+  color: var(--text-l);
   border: none;
   outline: none;
   border-radius: 3px;
   padding: 10px;
-  width: 70px;
   font-size: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   transition: 0.5s ease;
   box-shadow: var(--shadow);

@@ -1,14 +1,16 @@
 import React from "react";
+import FlipMove from "react-flip-move";
 import Todo from "../todo/Todo";
-import "./TodoList.css";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, setTodos }) => {
   return (
-    <div className="todo-list">
+    <FlipMove enterAnimation="fade" leaveAnimation="elevator">
       {todos.map((todo) => (
-        <Todo todo={todo} key={todo.id} />
+        <div key={todo.id}>
+          <Todo todo={todo} todos={todos} setTodos={setTodos} />
+        </div>
       ))}
-    </div>
+    </FlipMove>
   );
 };
 

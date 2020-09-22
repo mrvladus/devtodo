@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Input todos={todos} setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
 };
